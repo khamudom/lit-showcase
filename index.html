@@ -1,16 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit + TS</title>
+    <title>Lit Portfolio Demo | Web Components Showcase</title>
     <link rel="stylesheet" href="./src/index.css" />
     <script type="module" src="/src/my-element.ts"></script>
+    <script type="module" src="/src/components/Header/header.ts"></script>
+    <script type="module" src="/src/components/Page/page.ts"></script>
+    <script type="module" src="/src/components/Button/button.ts"></script>
   </head>
   <body>
-    <my-element>
-      <h1>Vite + Lit</h1>
-    </my-element>
+    <header-component></header-component>
+
+    <main>
+      <page-component>
+        <section class="hero">
+          <h1>Lit Web Components Showcase</h1>
+          <p>Explore the power of modern web components built with Lit</p>
+          <div style="display: flex; gap: 1rem; justify-content: center">
+            <button-component variant="primary">Get Started</button-component>
+            <a
+              href="http://localhost:6006"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                display: inline-flex;
+                align-items: center;
+                padding: 0.75rem 2rem;
+                border-radius: 2rem;
+                background: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: background 0.2s;
+              "
+              >View Storybook</a
+            >
+          </div>
+        </section>
+
+        <section class="features">
+          <h2>Featured Components</h2>
+        </section>
+      </page-component>
+    </main>
   </body>
 </html>
